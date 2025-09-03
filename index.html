@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>Computer Graphics Rendering</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="./layout.css" type="text/css">
+<!-- [if lt IE 9]><script src="./html5shiv.js"></script>< -->
+</head>
+<body>
+<a name="Home"></a>    
+
+<div class="wrapper row1">
+  <header id="header" class="clear">    
+    <table>
+        <td>
+            <div id="hgroup" align="left">      
+            <h1> Computer Graphics: Rendering</h1>
+            <h2> School of Informatics.</h1>            
+            <h2> Semester I, Autumn 2024</h1>            
+            </div>
+        </td>                
+        <td style='width:150px'>           
+        </td>        
+        <td>            
+           <div id="hgroup" align="right">      
+            <a href = "http://www.ed.ac.uk/informatics">
+                <object align="middle" type="image/png" data="./img/IFLogo.png" width="300px">                    
+                </object>
+            </a>
+            </div>
+        </td>
+    </table>    
+    <nav>
+      <ul>
+        <li><a href="#Lectures">Lectures</a></li>
+        <li><a href="#Schedule">Schedule</a></li>
+        <li><a href="#Tutorials">Tutorials</a></li>        
+        <li><a href="#Assignments">Coursework</a></li>                
+        <li><a href="#Resources">Resources</a></li>        
+        <li class="last"><a href="#Home">Home</a></li>
+      </ul>
+    </nav>    
+  </header>
+</div>
+
+
+<!-- <div class="wrapper row2">    
+    <div id="container" class="clear">        
+         <div class="tcontainer">
+            <div class="ticker-wrap">
+            <div class="ticker-move">
+              <div class="ticker-item"> If you require any clarification regarding syllabus, organisation, coursework, etc. for this course, please contact Kartic before the end of Week 2 </div>
+            <div class="ticker-item">  </div>                
+            </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+<div class="wrapper row2">    
+    <div id="container" class="clear">
+        <h2> Weekly checklist (scrollable) </h2>         
+        <div class="scroll-container">                   
+            <div id="container" class="clear">                     
+                
+                <p> Week 9</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> 
+                           Implement Blinn-Phong shading for rays that intersect objects. 
+                        </td>
+                    </tr>     
+                    <tr>
+                        <td> 2 </td>
+                        <td>
+                            Trace a shadow ray from the shaded point to point light sources. 
+                        </td>
+                    </tr>     
+                    <tr>
+                        <td> 3 </td>
+                        <td>
+                            Modify your Image class to also read a ppm texture. Implement texture maps for sphere, cylinder and triangle.
+                        </td>                        
+                    </tr>     
+                    <tr>
+                        <td> 4 </td>
+                        <td>
+                            Replicate (not necessarily pixel-perfect) the sample scenes provided. 
+                        </td>                        
+                    </tr>     
+                </table>
+
+                <p> Week 8</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> Tutorial on CW2 this week. Please attend. Check on Piazza if you want to attend a different tutorial. </td>                        
+                    </tr>
+
+                    <tr></tr>
+                        <td> 2 </td>
+                        <td> Hopefully you have designed your raytracer structure. Start with the simplest goal of raytracing a sphere at the origin using an orthographic camera on the -ve Z axis looking at the origin. Then repeat it for a virtual pinhole model with perspective.  </td>                        
+                    </tr>
+                    
+                    <tr>
+                        <td> 3 </td>
+                        <td> Write auxiliary classes for image and 3D model reading/writing. Test them separately from the raytracer.  </td>                        
+                    </tr>
+                </table>
+                
+                <p> Week 7</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> <a target="_blank" href="https://ksubr.github.io/CGR2024/cw/CGRCW1.pdf">Coursework 2</a> is now published! Please read the specs and begin planning ...  </td>                        
+                    </tr>
+                </table>
+
+                <p> Week 6</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> Final touches to the augmented result. Launch rendering of animation </td>                        
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Note the change of room for next week's presentations -- G.159 - MacLaren Stuart Room - Old College.</td>                        
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Sign up for a presentation slot. Click here --->  
+                            
+                            <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script>
+                            <script type="text/javascript">
+                                var JFL_242962976967379 = new JotformFeedback({
+                                formId: '242962976967379',
+                                base: 'https://form.jotform.com/',
+                                windowTitle: 'Preference form',
+                                backgroundColor: '#FFA500',
+                                fontColor: '#FFFFFF',
+                                type: 'false',
+                                height: 750,
+                                width: 750,
+                                openOnLoad: false
+                                });
+                            </script>
+                            <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+                            <script>window.jotformEmbedHandler("iframe[id='242962976967379']", "https://form.jotform.com/")</script>
+                            <a class="btn lightbox-242962976967379"
+                            style="
+                            margin-top: 16px;
+                            text-transform: uppercase;
+                            font-size: 14px;
+                            text-decoration: none;
+                            cursor: pointer;
+                            display: inline-block;
+                            padding: 10px;
+                            font-family: inherit;
+                            text-shadow: none;
+                            user-select: none;
+                            transition: all,.1s,ease-in;
+                            background-color: #FFA500;
+                            border: 1px solid #FFA500;
+                            color: #FFFFFF;
+                            ">
+                                CGR2024CW1
+                            </a>
+                            (first-come-first-serve). 
+                        </td>                        
+                    </tr>
+                </table>
+                
+                <p> Week 5</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> You should be able to complete the exercises in Coursework 1 by the end of this week.  </td>                        
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Design the scene for your animation for CW1. Rendering the frames might take some time, so better not to leave this for the last day.</td>                        
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Catch up with the reading task (to be posted after Thursday's lecture)</td>                        
+                    </tr>
+                </table>
+                
+                <p> Week 4</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> Please attend </address> <a target="_blank" href="https://ksubr.github.io/CGR2024/cw/CGRCW1.pdf">Tutorial 1</a> this week. The TA will describe how these exercises may be solved. You may also ask him general questions about CW1.  </td>                        
+                    </tr>
+                    <!-- <tr>
+                        <td> 2 </td>
+                        <td> Aim to complete the first 2 exercise questions by Wed and the third exercise by the end of this week. </td>                        
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Plan your scene and write down ideas for animation and virtual objects to insert. </td>                        
+                    </tr> -->
+
+                </table>
+                
+                
+                <p> Week 3</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> <a target="_blank" href="https://ksubr.github.io/CGR2024/cw/CGRCW1.pdf">Coursework 1</a> for CGR is now published. Please read the specs carefully. </td>                        
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Aim to complete the first 2 exercise questions by Wed and the third exercise by the end of this week. </td>                        
+                    </tr>
+                    <tr>
+                        <td> 3 </td>
+                        <td> Plan your scene and write down ideas for animation and virtual objects to insert. </td>                        
+                    </tr>
+
+                </table>
+                
+                <p> Week 2</p>
+                <table id="t04">                        
+                    <tr>
+                        <td> 1 </td>
+                        <td> Download and install <a target="_blank" href="https://www.blender.org/">blender</a>! </td>                        
+                    </tr>
+                    <tr>
+                        <td> 2 </td>
+                        <td> Use an online tutorial <a target="_blank" href="https://www.instructables.com/Beginners-Guide-to-Blender/"> such as this</a> to explore blender. What interesting shape can you make? </td>                        
+                    </tr>
+                </table>
+
+
+                <p> Week 1</p>
+                <table id="t04">                        
+                        <tr>
+                            <td> - </td>
+                            <td> First lecture on Thursday 19th Sep 2024! </td>                        
+                        </tr>    
+			            <tr>
+                            <td> 1 </td>
+                            <td> 
+                                Set up your Large language model (LLM) of choice. It is recommended that you use the free version of <a target="_blank" href="https://chat.openai.com/auth/login">OpenAI's ChatGPT</a> by signing up. 
+                                Alternatively, you may use Edinburgh Uni's very own <a target="_blank" href="https://www.ed.ac.uk/information-services/computing/comms-and-collab/elm">ELM</target>, Llama or any other open source LLM at your own risk. We have only tested the feasibility of the coursework with ChatGPT.
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td> 2 </td>
+                            <td> It is also recommended that you sign up for a free account for <a target="_blank" href="https://github.com/features/copilot">co-pilot</a> which is another tool that can help with C++ code generation. If you plan to use this tool, it is strongly recommended that you use the free (student) edition rather than the trial which will expire midway through the course. 
+                                For this, sign up to GitHub's global campus using your university email and student id. First, your application will be approved and then you will have access to the benefits (including co-pilot).
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td> 3 </td>
+                            <td> Both the above steps could take some time for approval. So, please do this as soon as possible. </td>                        
+                        </tr>     
+                </table>                         
+                
+                <p> Week 0</p> 
+                <table id="t04">                        
+                        <tr>
+                            <td> 1 </td>
+                            <td> 
+                                Register for the course.
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td> 2 </td>
+                            <td> Check that you have access on Learn to the course's Piazza page. </td>
+                            </td>
+                        </tr>     
+                        <tr>
+                            <td> 3 </td>
+                            <td> Check the course website. </td>                        
+                        </tr>     
+                    </table>
+
+             </div>            
+        </div>
+    </div>
+</div>
+
+
+<div class="wrapper row3">
+    <div id="container" class="clear">        
+     <h2> Contact </h2>
+        <table id="t03">                
+            <tr>
+                <td style="width:20%">Instructor</td>                                
+                <td style="width:20%">TA</td>                                
+            </tr>        
+            <tr>                
+                <td>
+                    <img src="img/Karticcgr2024.jpg" style="height: 96px">
+                </td>
+
+                <td>
+                    <img src="img/Krzysz.png" style="text-align:middle; height: 96px">
+                </td>
+                
+            <tr>
+                <td>Kartic Subr</td>
+                <td> Krzysztof Grykiel </td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>      
+        </table>      
+    
+        <table>
+            <tr>
+                <td valign="top" style='width:1000px'>            
+                    <ul>
+                        <li> Weeks 1-10: Lectures on Tue and Thu at 13:10 in LG.09, 40 George Square Lower Teaching Hub</li>
+                        <li> Weeks 4 and 8: Tutorials on Mon (10:00), Thu (09:00), Fri (14:00) in Appleton Tower 5.04</li>
+                        <li> Week 7: CW1 presentations on 29 Oct (13:10), 30 Oct (13:10), 1 Nov (12:10) in G.159 - MacLaren Stuart Room - Old College</li>
+                        <li> Week 11: CW1 presentations on 26 Nov (13:10), 28 Nov (13:10), 29 c (12:10) in G.159 - MacLaren Stuart Room - Old College</li>
+                        </ul>
+                    </td>
+                </tr>
+        </table>           
+    </div>
+</div>
+
+
+<div class="wrapper row2">    
+    <div id="container" class="clear">        
+
+        <table>
+            <tr>
+                <td valign="top" style='width:1000px'>            
+                <h2> Course guidelines </h2>
+                    <ul>
+                        <li> Please remember the good scholarly practice requirements of the University regarding work for credit, with guidance and further links  <a target="_blank" href="https://web.inf.ed.ac.uk/infweb/admin/policies/academic-misconduct">here</a>. 
+                         </li>
+                        <li>The deadline and late policy for this assignment are specified on Learn in the "Coursework Planner". Guidance on late submissions is  <a target="_blank" href="https://web.inf.ed.ac.uk/node/4533"> here </a>. </li>                        
+                        <li> There is no exam for this course. </li>
+                            <li> Final marks will be the average of 2 <a href="#Assignments"> coursework (CW) assignments, each worth 100 marks</a>. </li>                                                        
+                            <li> Expect about 1 to 1.5h of independent effort per day towards this course.</li>                                                                               
+                            <li> 10% of each CW will be assessed via a presentation. In case of exceptions, please contact the instructor.  </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table> 
+                                
+                    </ul>
+                </td>                            
+            </tr>
+        </table>           
+    </div>
+</div>
+
+<div class="wrapper row3">
+    <a name="Lectures"></a>
+    <div id="container" class="clear">        
+        <h2>Lectures</h2>
+        <table id="t01">                
+            <tr>
+                <td style="width:5%;">#</td>                
+                <td style="text-align:middle; width:30%;">Lecture Title</td>                
+                <td style="width:10%;">Date</td> <!-- Add the Date column -->
+                <td style="width:15%;">Slides</td>
+                <td style="width:10%;"> Reading </td>                                                
+            </tr>        
+            <tr>                
+                <td>1</td>                
+                <td>Introduction</td>                                
+                <td>19/09</td> <!-- Replace with the actual date -->         
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L1.pptx"> .pptx </a>
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L1.pdf"> .pdf </a></td>                       
+                <td></td>
+            </tr>
+            <tr>                
+                <td>2</td>                
+                <td>Imaging: radiometry and photometry</td>                          
+                <td>24/09</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L2.pptx"> .pptx </a>
+                <a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L2.pdf"> .pdf </a>                                       
+                </td>
+                <td><a target="_blank" href="https://pbr-book.org/3ed-2018/Color_and_Radiometry/Radiometry#sec:radiometry">PBR Ch 5.4 </a>       </td>
+            </tr>
+            <tr>                
+                <td>3</td>                
+                <td>Cameras</td>
+                <td>26/09</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L3.pptx"> .pptx </a>
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L3.pdf"> .pdf </a> </td>        
+                <td></td>
+            </tr>
+            <tr>                
+                <td>4</td>                
+                <td>Basic Modelling</td>                
+                <td>01/10</td>
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L4.pptx"> .pptx </a>
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L4.pdf"> .pdf </a> </td>        
+                <td></td>                
+            </tr>
+            
+            <tr>                
+                <td>5</td>                
+                <td>Raytracing: introduction</td>                                
+                <td>03/10</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L5.pptx"> .pptx </a>
+                <td></td>
+            </tr>
+            <tr>                
+                <td>6</td>                
+                <td>Raytracing: advanced</td>                
+                <td>08/10</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CG2023L6.pptx"> .pptx 
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L6.pdf"> .pdf 
+                </a></td>                
+                <td></td>                
+            </tr>
+            <tr>                
+                <td>7</td>                
+                <td>Numerical integration</td>                                
+                <td>12/10</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L7.pptx"> .pptx </a>
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/code/L7.zip"> code (.zip) </a></td>
+                <td><a target="_blank" href="https://my.ece.utah.edu/~ece6340/LECTURES/Jan30/Numerical%20Integration.pdf"> .pdf </a></td>                
+            </tr>
+
+            <tr>                
+                <td>8</td>                
+                <td>Monte Carlo Integration</td>                
+                <td>15/10</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L8.pptx"> .pptx </a>
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/code/L8.m"> code (.m) </a>
+                </td>
+                <td>
+                     <a target="_blank" href="https://homepages.inf.ed.ac.uk/ksubr/Files/SubrDissIntroMC.pdf"> notes</a>,  
+                    <a target="_blank" href="https://www.pbr-book.org/4ed/Monte_Carlo_Integration"> textbook </a> 
+                </td>                
+            </tr>
+
+            <tr>                
+                <td>9</td>                
+                <td>Light transport: path tracing I</td>                
+                <td>17/10</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L9.pptx"> .pptx </a>
+                </td>
+                <td></td>
+            </tr>
+
+            <tr>                
+                <td>10</td>                
+                <td>Light transport: path tracing II</td>                
+                <td>22/10</td> <!-- Replace with the actual date -->
+                <td></td>                
+                <td></td>                
+            </tr>
+
+            <tr>                
+                <td>11</td>                
+                <td>C++ Programming with GPT and co-pilot  </td>                
+                <td>24/10</td> <!-- Replace with the actual date -->   
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CppBorrowedSlides.pptx">.pptx </a>       </td>
+                <td> <a target="_blank" href="https://ocw.mit.edu/courses/6-096-introduction-to-c-january-iap-2011/pages/lecture-notes/">Notes,</a>       
+                <a target="_blank" href="https://ksubr.github.io/CGR2024/code/L11.zip">Code </a>       </td>                
+            </tr>
+
+            <tr>                
+                <td> </td>                
+                <td>Presentations: CW1</td>                                
+                <td>29/10</td> <!-- Replace with the actual date -->
+                <td></td>
+                <td></td>        
+            </tr>
+
+            <tr>                
+                <td> </td>                
+                <td>Presentations: CW1</td>                                
+                <td>31/10</td> <!-- Replace with the actual date -->
+                <td></td>
+                <td></td>        
+            </tr>
+            
+            <tr>                
+                <td></td>                
+                <td>Presentations: CW1</td>                
+                <td>01/11</td>                                
+                <td></td>
+                <td></td>
+            </tr>
+            
+            <tr>                
+                <td>12</td>                
+                <td>Sampling and reconstruction</td>                
+                <td>05/11</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L12.pptx"> .pptx </a>
+                <td></td>
+            </tr>
+            <tr>                
+                <td>13</td>                
+                <td>Sampling II</td>                
+                <td>07/11</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L13.pptx"> .pptx </a>
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L13Patterns.pdf"> sampling patterns </a>
+            </tr>
+            <tr>                
+                <td>14</td>                
+                <td>Volume Scattering</td>                
+                <td>12/11</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L14.pptx"> .pptx </a>
+                <td><a target="_blank" href="https://cs.dartmouth.edu/~wjarosz/publications/novak18monte-sig-slides-2-fundamentals.pdf"> scattering course </a></td>
+            </tr>
+            <tr>                
+                <td>15</td>                
+                <td>Fast rendering pipelines I</td>                
+                <td>14/11</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L15.pptx"> .pptx </a>
+                <td>
+                    <a target="_blank" href="https://advances.realtimerendering.com/s2024/index.html#intro"> 1 </a>
+                    <a target="_blank" href="https://advances.realtimerendering.com/s2022/SIGGRAPH2022-Advances-Lumen-Wright%20et%20al.pdf"> 2 </a>
+                    <a target="_blank" href="https://www.realtimeshadows.com/index.html%3Fq=node%252F15.html"> 3 </a>
+                    <a target="_blank" href="https://www.realtimeshadows.com/sites/default/files/sig2013-course-hardshadows_0.pdf"> 4 </a>
+                </td>
+            </tr>
+            <tr>                
+                <td>16</td>                
+                <td>Machine Learning in Computer Graphics</td>                
+                <td>19/11</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L16.pptx"> .pptx </a>
+                <td></td>
+            </tr>
+            <tr>                
+                <td>17</td>                
+                <td>Virtual Reality, conclusion and goodbyes </td>                
+                <td>21/11</td> <!-- Replace with the actual date -->
+                <td><a target="_blank" href="https://ksubr.github.io/CGR2024/lec/CGR24L17.pptx"> .pptx </a>
+                <td></td>  
+            </tr>            
+            <tr>                
+                <td> </td>                
+                <td>Presentations: CW2</td>                                
+                <td>26/11</td> <!-- Replace with the actual date -->
+                <td></td>
+                <td></td>        
+            </tr>
+
+            <tr>                
+                <td> </td>                
+                <td>Presentations: CW2</td>                                
+                <td>28/11</td> <!-- Replace with the actual date -->
+                <td></td>
+                <td></td>        
+            </tr>
+            
+            <tr>                
+                <td></td>                
+                <td>Presentations: CW2</td>                
+                <td>29/11</td>                                
+                <td></td>
+                <td></td>
+            </tr>
+            
+
+        </table>      
+        <p> * tentative topic-list (above) may be adapted to accommodate dynamic requirements. </p>
+    </div>
+</div>
+
+
+
+<div class="wrapper row3">
+    <a name="Schedule"></a> 
+        <div id="container" class="clear">
+        <h2> Schedule </h2>
+        <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRedXjsdCecbgLc5zprMOtkCmexW5_qP-TFltwjK65TO63euSZ-Kpg8bvc5cqzs9vhpTbDyyGa07FKk/pubhtml?gid=826219581&amp;single=true&amp;widget=true&amp;headers=false" width="495" height="680"></iframe>
+        </div>
+    </div>
+</div>
+  
+  
+
+<!-- Tutorials -->
+<div class="wrapper row3">
+    <a name="Tutorials"></a>
+    <div id="container" class="clear">        
+    <h2> Tutorials </h2>
+        <table id="t02">
+            <tr>                
+                <td  width=5%>#</td>                               
+                <td  width=25%>week</td> 
+                <td  width=25%>topic</td> 
+                 <td  width=30%>files</td>                     
+            </tr>       
+            <tr>
+                <td> 1 </td>
+                <td> 4 </td>
+                <td> Coursework 1 assistance </td>
+                <td ><a target="_blank" href="https://ksubr.github.io/CGR2024/cw/Tutorial1.pdf"> .pdf </a></td>
+            </tr>     
+            <tr>
+                <td> 2 </td>
+                <td> 8 </td>
+                <td> Coursework 2 assistance </td>
+                <td ><a target="_blank" href="https://ksubr.github.io/CGR2024/cw/Tutorial2.pdf"> .pdf </a></td>
+            </tr>     
+        </table>
+    </div>
+</div>
+
+
+<div class="wrapper row3">
+
+    <a name="Assignments"></a>
+
+    <div id="container" class="clear">
+
+    <h2> Coursework</h2>    
+    <table id="t01">
+            <tr>
+		<th align="middle">#</td>		
+		<th align="middle">topic</td>			
+                <th align="middle">issued</td>
+                <th align="middle">due</td>               
+                <th align="middle">files</td>                
+            </tr>
+             <tr>
+                <td> 1 </td>
+                <td> Augmented Reality </td>
+                <td> 30-09-2024</td>
+                <td> 12pm (noon) 25-10-2024</td>
+                <td ><a target="_blank" href="https://ksubr.github.io/CGR2024/cw/CGRCW1.pdf"> .pdf </a></td>
+            </tr>     
+            
+            <tr>
+                <td> 2 </td>
+                <td> Raytracing </td>
+                <td> 30-10-2024</td>
+                <td> 12pm (noon) 25-11-2024</td>
+                <td ><a target="_blank" href="https://ksubr.github.io/CGR2024/cw/CGRCW2.pdf"> .pdf </a>
+                    <a target="_blank" href="https://ksubr.github.io/CGR2024/cw/jsons.zip"> .json files </a></td>
+            </tr>     
+             </table>
+             <!-- <p>* Exact dates to be announced</p> -->
+            </div>
+
+</div>
+
+
+
+
+
+
+<!-- Resources-->
+<div class="wrapper row3">
+    <a name="Resources"></a>
+    <div id="container" class="clear">    
+    <table>
+        <tr>        
+            <h2> Books</h2>
+            <p> There is no text book for this course but the following books might help support your learning. You are not expected to purchase these books.  </p>
+            <table style="text-align: left; width: 800px;" border="0" cellpadding="2" cellspacing="2">
+            <tbody>
+            <tr>
+                <td style="vertical-align: top; width: 125px"><img style="width: 100px" alt="" src="./img/PBRBook.jpg"><br>
+                </td>
+                <td style="vertical-align: bottom; width: 535px">
+                <div style="text-align: left;"> Matt Pharr, Greg Humphreys &amp; Wenzel Jakob, <br>
+                </div>
+                <a target="_blank" href="https://www.amazon.co.uk/Physically-Based-Rendering-Theory-Implementation/dp/0128006455/ref=sr_1_1?keywords=physically+based+rendering&qid=1565613622&s=gateway&sr=8-1">
+                <em style="font-weight: bold; width: 300px">Physically Based Rendering (Third edition)</em><br> <br></a>
+                The book is currently freely available 
+                <a target="_blank" href="http://www.pbr-book.org/"><strong> online</strong></a>.
+                <ul>
+                </ul>
+                </td>                
+            </tr>          
+            <tr>
+                <td style="vertical-align: top; width: 125px"><img style="width: 100px" alt="" src="./img/RTWeekend.jpeg"><br>
+                </td>
+                <td style="vertical-align: bottom; width: 535px">
+                <div style="text-align: left;"> Peter Shirley, Trevor David Black &amp; Steve Hollasch, <br>
+                </div>
+                <a target="_blank" href="https://www.amazon.co.uk/Ray-Tracing-Weekend-Minibooks-Book-ebook/dp/B01B5AODD8">
+                <em style="font-weight: bold; width: 300px">Ray tracing in one weekend</em><br> <br></a>
+                The book is currently freely available 
+                <a target="_blank" href="https://raytracing.github.io/books/RayTracingInOneWeekend.html"><strong> online</strong></a>.
+                <ul>
+                </ul>
+                </td>                
+            </tr>          
+            <tr>
+                <td style="vertical-align: top; width: 125px"><img style="width: 100px" alt="" src="./img/FCGbook.jpeg"><br>
+                </td>
+                <td style="vertical-align: bottom; width: 535px">
+                <div style="text-align: left;"> Steve Marschner &amp; Peter Shirley <br>
+                </div>
+                <a target="_blank" href="https://www.amazon.com/Fundamentals-Computer-Graphics-Fourth-Marschner/dp/1482229390">
+                <em style="font-weight: bold; width: 300px">Fundamentals of Computer Graphics</em><br> <br></a>
+                The book is available for free online access  
+                <a target="_blank" href="https://discovered.ed.ac.uk/discovery/fulldisplay?docid=alma9924147654402466&context=L&vid=44UOE_INST:44UOE_VU2&lang=en&search_scope=UoE&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,computer%20graphics&facet=searchcreationdate,include,2016%7C,%7C2025&offset=0"><strong> in our library</strong></a>.
+                <ul>
+                </ul>
+                </td>                
+            </tr>          
+            </tbody>
+        </table>      
+        </tr>
+        <tr><td><br/></td></tr>
+        <tr><td><br/></td></tr>
+        <tr> 
+            <h2> Other resources </h2>
+            <ol>
+                <li>Tutorials on <a target="_blank" href="//www.blender.org/support/tutorials/"> Blender</a></li>
+                <li> <a target="_blank" href="http://www.cs.cornell.edu/courses/cs4620/2017sp/">Introduction to computer graphics</a> by Steve Marschner, Cornell University. </li>
+                
+                <!-- <li> <a target="_blank" href="https://canvas.dartmouth.edu/courses/16840">Computer graphics</a> by Wojciech Jarosz, Dartmouth College. </li>            
+                <li> <a target="_blank" href="http://www.cs.cornell.edu/courses/cs4620/2017sp/">Introduction to computer graphics</a> by Steve Marschner, Cornell University. </li>
+                <li> <a target="_blank" href="http://www.cs.cornell.edu/courses/cs5625/2016sp">Interactive computer graphics</a> by Steve Marschner, Cornell University. </li>
+                <li> <a target="_blank" href="https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-837-computer-graphics-fall-2012/index.htm">Computer graphics</a> by Wojciech Matusik and Fredo Durand, MIT Open Courseware (slightly older - 2012). </li>
+                <li> Lecture notes from Stanford's <a target="blank" href="http://graphics.stanford.edu/courses/cs164-09-spring/">past offering of CS164</a>. Click on 'Lecture Notes' in the left pane. Highly recommended.
+                <li> <a target="_blank" href="http://kesen.realtimerendering.com/">SIGGRAPH (and other graphics) papers</a> over the past few years. </li>                        -->
+            </ol>
+        </tr>                    
+        </table>    
+    </p>    
+    </div>
+</div>
+
+
+
+<!-- Footer -->
+<div class="wrapper rowbottom">
+    <footer id="footer" class="clear">
+      <p class="fl_left">Copyright &copy; 2012 - All Rights Reserved </p>    
+      <p class="fl_right">Website by Kartic Subr & <a target="_blank" href="http://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+   </footer>
+  </div>
+
+
+
+</body>
+</html>
+
+
+<!--  <ol type="1">        
+            <li>Introduction</li>
+            <li>2D Graphics - Part 1</li>
+            <li>2D Graphics - Part 2</li>
+            <li>3D Graphics - Part 1</li>
+            <li>3D Graphics - Part 2</li>
+            <li>3D Graphics - Part 3</li>
+            <li>3D Graphics - Part 4</li>
+            <li>3D Graphics - Part 5</li>
+            <li>3D Graphics - Part 6</li>
+            <li>3D Graphics - Part 7</li>
+            <li>3D Graphics - Part 8</li>
+            <li>3D Graphics - Part 9</li>
+            <li>3D Graphics - Part 10</li>
+            <li>Related topics - Part 1</li>
+            <li>Related topics - Part 2</li>
+            <li>VR and AR - Part 1</li>
+            <li>VR and AR - Part 2</li>
+            <li>Conclusion</li>
+        </ol>
+-->
