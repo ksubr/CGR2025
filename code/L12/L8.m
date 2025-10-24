@@ -10,7 +10,7 @@ viscircles(c,r, 'Color', 'blue') ;
 axis([0,1,0,1]) ;
 hold on; % start overlaying plots
 
-rep =100000 ;
+rep =1 ;
 
 tic
 for i=1:rep
